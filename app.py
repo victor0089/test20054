@@ -27,9 +27,6 @@ class UserForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired()])
     password = PasswordField('Password', validators=[DataRequired()])
     submit = SubmitField('Submit')
-  @app.route('/')
-def index():
-    return 'Welcome to the Home Page'
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
